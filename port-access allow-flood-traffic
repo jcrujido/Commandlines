@@ -1,0 +1,12 @@
+
+port-access allow-flood-traffic {enable | disable}
+
+Enables or disables transmission of flood traffic, such as broadcast, multicast, and unknown unicast messages through a security enabled port on which no client has been authenticated.
+By default, transmission of flood traffic is disabled.
+
+https://arubanetworking.hpe.com/techdocs/AOS-CX/10.11/HTML/cli_6200/Content/Chp_Port_acc/Port_acc_gen_cmds/por-acc-all-flo-tra-fl-10.htm
+
+Sample Command
+
+switch(config)# int 2/1/24
+switch(config-if)# port-access allow-flood-traffic enable
