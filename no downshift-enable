@@ -1,0 +1,13 @@
+no downshift-enable
+
+When downshift enabled, downshift allows an interface to link at a lower advertised speed when unable to establish a stable link at the maximum speed. In our case, Printer is negotiating 10mbps if it is unable to negotiate with 1Gbps. So if we disable the downshift, the port may stay at 1Gbps even though the port are configure for auto negotiation.
+
+The downshift command supports in the Auto negotiation ports only. Please refer the below link
+
+https://www.arubanetworks.com/techdocs/AOS-CX/10.12/HTML/monitoring_4100i-6000-6100/Content/Chp_DnShft/DnShft_cmds/dow-ena.htm
+
+Example Command
+
+
+FLRDH01-6200F-48-SW13(config)# int 2/1/24
+FLRDH01-6200F-48-SW13(config-if)# no downshift-enable
