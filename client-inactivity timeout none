@@ -1,0 +1,9 @@
+client-inactivity timeout none
+
+Configures the "Client Inactivity Timeout" period that the switch waits for a response from a client after which it removes the client from the role
+If we provide Client Inactivity Timeout as none in the DUR role, the switch will not release the mac address from the port once authenticated and it would not try to negotiate with 10Mbps
+
+Example command:
+
+port-access role DUR-GUEST-PRINTER
+   client-inactivity timeout none
